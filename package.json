@@ -1,0 +1,24 @@
+{
+  "name": "professional-read-me-generator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rick7Peace/professional-read-me-generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rick7Peace/professional-read-me-generator/issues"
+  },
+  "homepage": "https://github.com/Rick7Peace/professional-read-me-generator#readme",
+  "description": "",
+  "dependencies": {
+    "inquirer": "^13.2.4"
+  }
+}
