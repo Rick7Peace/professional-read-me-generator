@@ -1,10 +1,10 @@
-# Test
+# test
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
 
-Testing README generator
+test
 
 ## Table of Contents
 
@@ -23,7 +23,7 @@ npm install
 
 ## Usage
 
-run node index.js to generate a README
+test
 
 ## License
 
@@ -45,5 +45,5 @@ npm test
 
 For additional questions, reach out via:
 
-- GitHub: [Rick7Peace](https://github.com/Rick7Peace)
-- Email: [marmolejo.ricardo@gmail.com](mailto:marmolejo.ricardo@gmail.com)
+- GitHub: [t](https://github.com/t)
+- Email: [test@gmail.com](mailto:test@gmail.com)
