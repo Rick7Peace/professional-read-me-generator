@@ -11,8 +11,7 @@ A command-line application that dynamically generates professional `README.md` f
 
 Instead of manually writing a README from scratch for every project, developers can answer a series of guided prompts and receive a fully structured, ready-to-publish markdown file with a license badge, clickable table of contents, and contact links.
 
-<!-- TODO: Add walkthrough screenshot or GIF here -->
-<!-- ![App Screenshot](./assets/screenshot.png) -->
+![App Demo](./assets/demo.gif)
 
 ## Table of Contents
 
