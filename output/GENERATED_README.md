@@ -45,5 +45,5 @@ npm test
 
 For additional questions, reach out via:
 
-- GitHub: [t](https://github.com/t)
-- Email: [test@gmail.com](mailto:test@gmail.com)
+- GitHub: [7](https://github.com/7)
+- Email: [7@gmail.con](mailto:7@gmail.con)

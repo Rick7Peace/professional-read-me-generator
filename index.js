@@ -5,6 +5,8 @@ import chalk from "chalk";
 import questions from "./lib/prompts.js";
 import generateMarkdown from "./lib/generateMarkdown.js";
 
+const OUTPUT_PATH = "./output/GENERATED_README.md";
+
 // Write the generated README to the output directory
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, data, (err) =>
@@ -18,15 +20,32 @@ function writeToFile(fileName, data) {
 }
 
 // Initialize the application
-function init() {
+async function init() {
   console.log(chalk.cyan.bold("\n🚀 Professional README Generator\n"));
   console.log(chalk.yellow("Answer the following questions to generate your README:\n"));
 
-  inquirer.prompt(questions).then((answers) => {
-    const markdown = generateMarkdown(answers);
-    writeToFile("./output/GENERATED_README.md", markdown);
-  });
-}
+  const answers = await inquirer.prompt(questions);
+  const markdown = generateMarkdown(answers);
+
+  // overwrite protection - warn user if output file already exists 
+  if (fs.existsSync(OUTPUT_PATH)) {
+    const { confirmOverwrite } = await inquirer.prompt([
+      {
+        type: "confirm",
+        name: "confirmOverwrite",
+        message: chalk.yellow(`⚠️ ${OUTPUT_PATH} already exists. Overwrite?`),
+        default: false,
+      },
+    ]);
+
+    if (!confirmOverwrite) {
+      console.log(chalk.red.bold("❌ Operation cancelled. Your existing file is safe.\nt"));
+      return;
+    }
+    }
+
+    writeToFile(OUTPUT_PATH, markdown);
+  }
 
 // Launch the app
 init();
