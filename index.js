@@ -13,21 +13,46 @@ function writeToFile(fileName, data) {
     err
       ? console.error(chalk.red.bold("❌ Error writing file:"), err.message)
       : console.log(
-        chalk.green.bold("\n✅ successfulluy generated ") +
-          chalk.magenta(fileName)
+          chalk.green.bold("\n✅ successfully generated ") +
+            chalk.magenta(fileName)
         )
-      );
+  );
 }
 
 // Initialize the application
 async function init() {
   console.log(chalk.cyan.bold("\n🚀 Professional README Generator\n"));
-  console.log(chalk.yellow("Answer the following questions to generate your README:\n"));
+  console.log(
+    chalk.yellow("Answer the following questions to generate your README:\n")
+  );
 
   const answers = await inquirer.prompt(questions);
   const markdown = generateMarkdown(answers);
 
-  // overwrite protection - warn user if output file already exists 
+  // Preview mode - show generated README before saving
+  console.log(
+    chalk.cyan.bold("\n📄 ── README Preview ─────────────────────────\n")
+  );
+  console.log(markdown);
+  console.log(
+    chalk.cyan.bold("──────────────────────────────────────────────\n")
+  );
+
+  const { confirmSave } = await inquirer.prompt([
+    {
+      type: "confirm",
+      name: "confirmSave",
+      message: chalk.green("💾 Do you want to save this README?"),
+      default: true,
+    },
+  ]);
+
+  if (!confirmSave) {
+    console.log(chalk.red.bold("❌ Operation discarded. No file was saved.\n"));
+    return;
+  }
+
+  // overwrite protection - warn user if output file already exists
   if (fs.existsSync(OUTPUT_PATH)) {
     const { confirmOverwrite } = await inquirer.prompt([
       {
@@ -39,13 +64,15 @@ async function init() {
     ]);
 
     if (!confirmOverwrite) {
-      console.log(chalk.red.bold("❌ Operation cancelled. Your existing file is safe.\nt"));
+      console.log(
+        chalk.red.bold("❌ Operation cancelled. Your existing file is safe.\nt")
+      );
       return;
     }
-    }
-
-    writeToFile(OUTPUT_PATH, markdown);
   }
 
-// Launch the app
+  writeToFile(OUTPUT_PATH, markdown);
+}
+
+// Launch the app  
 init();

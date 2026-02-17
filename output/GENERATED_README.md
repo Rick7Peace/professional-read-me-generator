@@ -1,10 +1,10 @@
-# test
+# professional readme generator 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
 
-test
+generates a readme file 
 
 ## Table of Contents
 
@@ -23,7 +23,7 @@ npm install
 
 ## Usage
 
-test
+initializing readme
 
 ## License
 
@@ -46,4 +46,4 @@ npm test
 For additional questions, reach out via:
 
 - GitHub: [7](https://github.com/7)
-- Email: [7@gmail.con](mailto:7@gmail.con)
+- Email: [peace7rick@aol.com](mailto:peace7rick@aol.com)
