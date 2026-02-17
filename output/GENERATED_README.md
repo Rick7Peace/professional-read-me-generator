@@ -1,10 +1,10 @@
-# professional readme generator 
+# Professional README Generator
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
 ## Description
 
-generates a readme file 
+A command-line application that dynamically generates professional README.md files from user input, featuring color-coded output, preview mode, and overwrite protection.
 
 ## Table of Contents
 
@@ -23,17 +23,17 @@ npm install
 
 ## Usage
 
-initializing readme
+Run node index.js from the project root and follow the interactive prompts to generate a complete README with license badges, table of contents, and contact links.
 
 ## License
 
-This application is covered under the MIT License.
+This application is not covered under any license.
 
-For more information, visit: https://opensource.org/licenses/MIT
+For more information, visit: 
 
 ## Contributing
 
-Fork the repo, create a feature branch, and submit a pull request.
+mit
 
 ## Tests
 
@@ -45,5 +45,5 @@ npm test
 
 For additional questions, reach out via:
 
-- GitHub: [7](https://github.com/7)
-- Email: [peace7rick@aol.com](mailto:peace7rick@aol.com)
+- GitHub: [peace7rick](https://github.com/peace7rick)
+- Email: [marmolejo.ricardo@gmail.com](mailto:marmolejo.ricardo@gmail.com)
